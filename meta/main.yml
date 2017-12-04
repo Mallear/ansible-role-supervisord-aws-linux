@@ -17,4 +17,6 @@ galaxy_info:
   - system
 
 dependencies:
-  - { role: Mallear.yum, yum_install_packages: [python-pip, python-setuptools], become: yes }
+  - role: Mallear.yum
+    yum_install_packages: [python-pip, python-setuptools]
+    become: yes
