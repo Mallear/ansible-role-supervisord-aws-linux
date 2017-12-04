@@ -1,0 +1,31 @@
+---
+
+  - name: Install supervisor through easy_install
+    easy_install:
+      name: supervisor
+      state: latest
+
+  - name: Ensure programs directory is created
+    file:
+      dest: "{{ supervisor_programs_dir }}"
+      state: directory
+
+  - name: Ensure logs directory is created
+    file:
+      dest: "{{ supervisor_childlogdir }}"
+      state: directory
+
+  - name: Install supervisord script
+    template:
+      src: supervisord.j2
+      dest: /etc/init.d/supervisord
+      mode: 0755
+      owner: root
+      group: root
+
+  - name: Install supervisor main configuration file
+    template:
+      src: supervisord.conf.j2
+      dest: /etc/supervisord.conf
+      mode: 0644
+    notify: start supervisor

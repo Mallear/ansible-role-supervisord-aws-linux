@@ -1,0 +1,19 @@
+---
+
+galaxy_info:
+  author: Maxime Sibellas
+  description: Install minimal Supervisor on Amazon Linux
+  company: Ekino
+  license: license (GPLv2, CC-BY, etc)
+  min_ansible_version: 1.7
+  platforms:
+  - name: AmazonLinux
+    versions:
+    - 6
+  categories:
+  - development
+  - web
+  - system
+
+dependencies:
+  - { role: Mallear.yum, yum_install_packages: [python-pip, python-setuptools] }
