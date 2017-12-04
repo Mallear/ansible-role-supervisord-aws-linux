@@ -3,4 +3,4 @@
   remote_user: root
   become: yes
   roles:
-  - Mallear.supervisor-aws-linux
+  - Mallear.supervisord-aws-linux

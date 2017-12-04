@@ -1,6 +1,8 @@
 Ansible role for Supervisor install on Amazon Linux
 ---
 
+Ansible role for Supervisor install on Amazon Linux, CentOS 6/7.
+
 # Role variables
 
 ```yaml
@@ -31,5 +33,5 @@ supervisor_minprocs: 200                                    # number of process 
   remote_user: root
   become: yes
   roles:
-  - Mallear.supervisor-aws-linux
+  - Mallear.supervisord-aws-linux
 ```

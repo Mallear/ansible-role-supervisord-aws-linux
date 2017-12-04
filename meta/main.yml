@@ -7,9 +7,10 @@ galaxy_info:
   license: license (GPLv2, CC-BY, etc)
   min_ansible_version: 1.7
   platforms:
-  - name: AmazonLinux
+  - name: EL
     versions:
     - 6
+    - 7
   categories:
   - development
   - web
